@@ -258,6 +258,7 @@ class SimulatorService {
     String summaryAdvice = '';
 
     if (majorPurchaseAmount > 0 && majorPurchaseMonthIndex <= 24) {
+      // ignore: unused_local_variable
       final totalDebtImpact = simulatedDebts.fold(0.0, (sum, d) => sum + d.remainingAmount);
       if (finalDP.projectedHealthScore < startHealth) {
         summaryAdvice = 'Buying this asset will decrease your Financial Health Score by ${healthDiff.abs()} points (to ${finalDP.projectedHealthScore}/100) due to the reduced emergency runway and added monthly expenses.';
